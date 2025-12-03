@@ -54,7 +54,9 @@ const Dock = () => {
         }
     },[]);
 
-    const toggleApp = (app:any) =>{}
+    const toggleApp = (app:any) =>{
+        //opnes the app window
+    }
 
     return (
         <section id="dock">
