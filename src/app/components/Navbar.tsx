@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { navIcons, navLinks } from '@/constants'
+import dayjs from 'dayjs'
 
 const Navbar = () => {
   return (
@@ -19,9 +20,12 @@ const Navbar = () => {
         <div className="">
             <ul>
                 {navIcons.map((icon) => (
-                    <li key={icon.id}></li>
+                    <li key={icon.id}>
+                        <Image src={icon.img} alt={`icon-${icon.id}`} width={15} height={15}/>
+                    </li>
                 ))}
             </ul>
+            <time>{dayjs().format("ddd MMM D h:mm A")}</time>
         </div>
     </nav>
   )
