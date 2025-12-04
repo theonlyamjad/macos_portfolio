@@ -1,8 +1,8 @@
 
-import { Navbar, Welcome ,Dock } from "./components";
+import { Navbar, Welcome ,Dock,HomeDesktop } from "./components";
 import { Draggable } from "gsap/Draggable";
 import { gsap } from "gsap";
-import Terminal from "../windows/Terminal";
+import {Terminal,Safari,Resume,Finder,Text,Image,Photos} from "@/windows";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(Draggable);
 
@@ -14,6 +14,14 @@ export default function Home() {
       <Welcome/>
       <Dock/>
       <Terminal/>
+      <Safari/>
+      <Resume/>
+      <Finder/>
+      <Text/>
+      <Image/>
+      <Photos/>
+      <HomeDesktop/>
+
     </main>
   );
 }

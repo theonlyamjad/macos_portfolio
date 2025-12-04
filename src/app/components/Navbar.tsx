@@ -1,9 +1,14 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import { navIcons, navLinks } from '@/constants'
 import dayjs from 'dayjs'
+import useWindowStore from '@/store/window'
 
 const Navbar = () => {
+
+    const {openWindow} = useWindowStore();
+
   return (
     <nav>
         <div className="">
@@ -11,7 +16,7 @@ const Navbar = () => {
             <p className='font-bold'>Amjad's Portfolio</p>
             <ul>
                 {navLinks.map((link) => (
-                    <li key={link.id}>
+                    <li key={link.id} onClick={()=>(link.type)}>
                         <p>{link.name}</p>  
                     </li>
                 ))}
