@@ -5,9 +5,11 @@ import { Tooltip } from "react-tooltip";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import useWindowStore from "@/store/window";
 
 const Dock = () => {
     const dockRef = useRef<HTMLDivElement>(null);
+    const {openWindow,closeWindow,windows} = useWindowStore();
 
     useGSAP(()=>{
         const dock = dockRef.current
@@ -55,7 +57,14 @@ const Dock = () => {
     },[]);
 
     const toggleApp = (app:any) =>{
-        //opnes the app window
+        if(!app.canOpen) return;
+        const window = windows[app.id];
+        if(window.isOpen){
+            closeWindow(app.id);
+        }else{
+            openWindow(app.id);
+        }
+        console.log(windows);
     }
 
     return (

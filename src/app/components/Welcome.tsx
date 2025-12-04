@@ -4,6 +4,7 @@ import {useRef} from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
+
 type FontWeightType = 'subtitle' | 'title'
 
 interface FontWeightConfig {

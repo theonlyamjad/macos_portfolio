@@ -65,7 +65,7 @@ body {
   .icon {
     @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
   }
-
+  
   #welcome {
     @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
@@ -350,7 +350,7 @@ body {
     }
   }
 
-  #txtfile {
+  #textfile {
     @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
