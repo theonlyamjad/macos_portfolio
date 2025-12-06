@@ -1,5 +1,6 @@
 "use client"
 import WindowControls from '@/app/components/WindowControl'
+import WindowWrapper from '@/hoc/WindowWrapper'
 import { Search } from 'lucide-react'
 import { locations } from '@/constants'
 import clsx from 'clsx'
@@ -9,7 +10,7 @@ import useWindowStore from '@/store/window'
 
 const Finder = () => {
     const { openWindow } = useWindowStore()
-    const { activeLocation, setActiveLocation } = useLocationStore() as any
+    const { activeLocation, setActiveLocation } = useLocationStore() as any;
 
     const openItem = (item: any) => {
         if (item.fileType === 'pdf') return openWindow('resume')
@@ -21,7 +22,7 @@ const Finder = () => {
     }
 
     const renderList = (name: any, items: any) => (
-        <div className="">
+        <div className="">  
             <h3>{name}</h3>
             <ul>
                 {items.map((item: any) => (
@@ -29,8 +30,8 @@ const Finder = () => {
                         <Image
                             src={item.icon}
                             alt={item.name}
-                            width={50}
-                            height={50}
+                            width={18}
+                            height={18}
                             className={clsx(item.id === activeLocation.id ? "active" : "not-active")}
                         />
                         <p className="text-sm font-medium truncate">{item.name}</p>
@@ -69,4 +70,5 @@ const Finder = () => {
     )
 }
 
-export default Finder
+const FinderWindow = WindowWrapper(Finder, 'finder')
+export default FinderWindow

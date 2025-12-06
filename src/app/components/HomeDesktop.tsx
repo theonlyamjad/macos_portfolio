@@ -11,7 +11,7 @@ const projects = locations.work?.children?? [];
 
 const Home = () => {
 
-    const {openWindow} = useWindowStore();
+    const {openWindow} = useWindowStore() ;
     const {setActiveLocation} = useLocationStore() as any;
 
     const handleOpenProjectFinder = (project:any) => {
@@ -19,7 +19,7 @@ const Home = () => {
         openWindow("finder");
     }
 
-    useGSAP(()=>{
+    useGSAP(()=>{   
         Draggable.create(".folder");
     },[]);
 
@@ -27,7 +27,7 @@ const Home = () => {
     <section id="home">
         <ul>
             {projects.map((project) =>(
-                <li key={project.id} className={clsx("group folder",project.windowPosition)}>
+                <li key={project.id} className={clsx("group folder",project.windowPosition)} onClick={()=>handleOpenProjectFinder(project.id)}>
                     <Image
                     src="/images/folder.png"
                     alt={project.name}
@@ -41,5 +41,6 @@ const Home = () => {
     </section>
   )
 }
+
 
 export default Home

@@ -16,7 +16,7 @@ const Navbar = () => {
             <p className='font-bold'>Amjad's Portfolio</p>
             <ul>
                 {navLinks.map((link) => (
-                    <li key={link.id} onClick={()=>(link.type)}>
+                    <li key={link.id} onClick={()=>openWindow(link.type)}>
                         <p>{link.name}</p>  
                     </li>
                 ))}

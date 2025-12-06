@@ -30,8 +30,8 @@ const Photos = () => {
                             <Image 
                                 src={icon}
                                 alt={title}
-                                width={50}
-                                height={50}
+                                width={18}
+                                height={18}
                             />
                             <p>{title}</p>
                         </li>
@@ -53,8 +53,8 @@ const Photos = () => {
                             <Image
                                 src={img}
                                 alt={`Gallery image ${id}`}
-                                width={50}
-                                height={50}
+                                width={250}
+                                height={150}
                             />
                         </li>
                     ))}
@@ -65,4 +65,5 @@ const Photos = () => {
   )
 }
 
-export default Photos
+const PhotosWindow = WindowWrapper(Photos, 'photos')
+export default PhotosWindow

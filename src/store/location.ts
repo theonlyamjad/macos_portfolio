@@ -1,17 +1,30 @@
-import { create } from "zustand";
-import { immer } from "zustand/middleware/immer";
-import { locations } from "@/constants";
+import { create } from "zustand"
+import { immer } from "zustand/middleware/immer"
+import { locations } from "@/constants"
 
+interface LocationState {
+    activeLocation: any
+    setActiveLocation: (location: any) => void
+    resetActiveLocation: () => void
+}
 
-const DEFAULT_LOCATION = locations.work;
+const DEFAULT_LOCATION = locations.work
 
-const useLocationStore = create(immer((set) => ({
-    activeLocation: DEFAULT_LOCATION,
+const useLocationStore = create<LocationState>()(
+    immer((set) => ({
+        activeLocation: DEFAULT_LOCATION,
 
-    setActiveLocation: (location:any) => set((state:any) => {if(location === undefined) return; state.activeLocation = location}),
+        setActiveLocation: (location: any) => 
+            set((state) => {
+                if (location === undefined || !location) return
+                state.activeLocation = location
+            }),
 
-    resetActiveLocation: () => set((state:any) => { state.activeLocation = DEFAULT_LOCATION })
-})))
+        resetActiveLocation: () => 
+            set((state) => {
+                state.activeLocation = DEFAULT_LOCATION
+            })
+    }))
+)
 
-
-export default useLocationStore;
+export default useLocationStore

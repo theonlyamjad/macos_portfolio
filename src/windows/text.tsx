@@ -46,4 +46,5 @@ const Text = () => {
   )
 }
 
-export default Text
+const TextWindow = WindowWrapper(Text,'txtfile')
+export default TextWindow
