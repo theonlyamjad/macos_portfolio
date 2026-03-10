@@ -80,27 +80,31 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["JavaScript", "TypeScript", "React.js", "Next.js"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Bootstrap", "Tailwind CSS"],
+  },
+  {
+    category: "Animation & 3D",
+    items: ["GSAP","motion.js", "Three.js"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["PHP", "Laravel"],
+  },
+  {
+    category: "Programming Languages",
+    items: ["C++", "C#", "Java (OOP)", "VB.NET"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["SQL", "phpMyAdmin", "MongoDB", "PostgreSQL"],
   },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    {
+    category: "Tools",
+    items: ["Figma", "Blender", "Git & Github", "Postman"],
   },
 ];
 
@@ -152,19 +156,11 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/Amjad.jpg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
+    img: "/images/Amjad.jpg",
   },
 ];
 
