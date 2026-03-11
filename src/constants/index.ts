@@ -161,7 +161,15 @@ const gallery = [
   },
   {
     id: 2,
-    img: "/images/Amjad.jpg",
+    img: "/images/jobintech.jpeg",
+  },
+  {
+    id: 3,
+    img: "/images/soutenance.jpg",
+  },
+  {
+    id: 4,
+    img: "/images/black_white.png",
   },
 ];
 

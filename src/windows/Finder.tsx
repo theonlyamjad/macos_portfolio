@@ -10,7 +10,10 @@ import useWindowStore from '@/store/window'
 
 const Finder = () => {
     const { openWindow } = useWindowStore()
-    const { activeLocation, setActiveLocation } = useLocationStore() as any;
+    const { activeLocation, setActiveLocation } = useLocationStore() as any
+
+    // Fallback to locations.work if activeLocation is null/undefined
+    const currentLocation = activeLocation ?? locations.work
 
     const openItem = (item: any) => {
         if (item.fileType === 'pdf') return openWindow('resume')
@@ -21,29 +24,32 @@ const Finder = () => {
         openWindow(`${item.fileType}${item.kind}`, item)
     }
 
-    const renderList = (name: any, items: any) => (
-        <div className="">  
-            <h3>{name}</h3>
-            <ul>
-                {items.map((item: any) => (
-                    <li key={item.id} onClick={() => setActiveLocation(item)}>
-                        <Image
-                            src={item.icon}
-                            alt={item.name}
-                            width={18}
-                            height={18}
-                            className={clsx(item.id === activeLocation.id ? "active" : "not-active")}
-                        />
-                        <p className="text-sm font-medium truncate">{item.name}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+    const renderList = (name: any, items: any) => {
+        if (!Array.isArray(items) || items.length === 0) return null
+        return (
+            <div>
+                <h3>{name}</h3>
+                <ul>
+                    {items.map((item: any) => (
+                        <li key={item.id} onClick={() => setActiveLocation(item)}>
+                            <Image
+                                src={item.icon}
+                                alt={item.name}
+                                width={18}
+                                height={18}
+                                className={clsx(item.id === currentLocation?.id ? "active" : "not-active")}
+                            />
+                            <p className="text-sm font-medium truncate">{item.name}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )
+    }
 
     return (
         <>
-            <div id='window-header' className="">
+            <div id='window-header'>
                 <WindowControls target="finder" />
                 <Search className="icon" />
             </div>
@@ -53,7 +59,7 @@ const Finder = () => {
                     {renderList('Work', locations.work.children)}
                 </div>
                 <ul className='content'>
-                    {activeLocation?.children.map((item: any) => (
+                    {(currentLocation?.children ?? []).map((item: any) => (
                         <li key={item.id} className={item.position} onClick={() => openItem(item)}>
                             <Image
                                 src={item.icon}

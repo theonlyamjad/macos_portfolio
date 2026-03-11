@@ -60,5 +60,4 @@ const Safari = () => {
 }
 
 const SafariWindow = WindowWrapper(Safari, "safari")
-
 export default SafariWindow
