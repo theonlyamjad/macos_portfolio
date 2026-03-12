@@ -157,7 +157,7 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/Amjad.jpg",
+    img: "/images/black_white.png",
   },
   {
     id: 2,
@@ -169,7 +169,7 @@ const gallery = [
   },
   {
     id: 4,
-    img: "/images/black_white.png",
+    img: "/images/Amjad.jpg",
   },
 ];
 
@@ -191,10 +191,10 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
+    // ▶ Project 1  
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "MARcrute",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -232,22 +232,13 @@ const WORK_LOCATION = {
           position: "top-52 right-80",
           imageUrl: "/images/project-1.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
       ],
     },
 
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Frovi",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -285,22 +276,12 @@ const WORK_LOCATION = {
           position: "top-52 left-80",
           imageUrl: "/images/project-2.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
       ],
     },
-
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Contact-App",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -337,15 +318,6 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-3.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
         },
       ],
     },
@@ -418,8 +390,6 @@ const RESUME_LOCATION = {
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
     },
   ],
 };
