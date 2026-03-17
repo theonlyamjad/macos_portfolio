@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 const navLinks = [
   {
     id: 1,
@@ -75,7 +77,13 @@ const dockApps = [
 ];
 
 const blogPosts = [
-  
+  {
+    id:1,
+    date: "Sep 2 , 2025",
+    title : "bla bla",
+    image : "/images/" ,
+    link : "",
+  }
 ];
 
 const techStack = [
@@ -191,7 +199,7 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1  
+    // ▶ MARcrute 
     {
       id: 5,
       name: "MARcrute",
@@ -208,7 +216,9 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "dsgfd",
+            "MARcrute is a social work staffing platform built for the Moroccan market, connecting social workers with institutions and enterprises. ",
+            "Developed with Next.js, TypeScript, PostgreSQL, and Prisma ORM, it features separate portals for workers, enterprises, and admins with role-based access control",
+            "The platform includes NextAuth.js v5 authentication, a diploma validation system, mission management, and a comprehensive admin dashboard all with a French-language UI.",
           ],
         },
         {
@@ -231,7 +241,7 @@ const WORK_LOCATION = {
         },
       ],
     },
-    // ▶ Project 2
+    // ▶ Frovi
     {
       id: 6,
       name: "Frovi",
@@ -248,7 +258,8 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "Ecommerce Drinks Landing Page with Next.js, GSAP, Three.js",
+            "Frovi is a landing page for a natural drinks brand. It highlights three products, a coffee blend, a fresh juice, and a light soda , with a simple flavor selector to browse between them.",
+            "The overall vibe is clean and health-focused, built around the idea of drinks that are both good for you and actually enjoyable.",
           ],
         },
         {
@@ -263,15 +274,15 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "frovi.png",
-          icon: "/images/frovi.png",
+          icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/images/frovi.png",
         },
       ],
     },
-    // ▶ Project 3
+    // ▶ Contact-App
     {
       id: 7,
       name: "Contact-App",
@@ -312,7 +323,7 @@ const WORK_LOCATION = {
         },
       ],
     },
-    // ▶ Project 4
+    // ▶ PDA
     {
       id: 8,
       name: "PDA",
@@ -329,7 +340,7 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "German language center website that is based in Casablanca,Morocco.",
+            "Perfekt Deutsch Akademie — A German language school website built with Next.js, offering courses from A1 to B2 with certification prep and career guidance for Moroccan students targeting Germany.",
           ],
         },
         {
@@ -363,33 +374,6 @@ const ABOUT_LOCATION = {
   kind: "folder",
   children: [
     {
-      id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
-    },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
-    },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
-    },
-    {
       id: 4,
       name: "about-me.txt",
       icon: "/images/txt.png",
@@ -397,12 +381,11 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I’m Amjad 👋, passionate and motivated Full-Stack Developer with a solid academic background in computer development and hands-on experience through multiple internships.",
+        "Skilled in ReactJS, NextJS, HTML, CSS, JavaScript, and PHP/Laravel.",
+        "I specialize in end-to-end project development and problem-solving with adaptability, autonomy, and continuous learning as core strengths.",
+        "Currently enhancing my expertise in modern JavaScript frameworks and full-stack architectures.",
       ],
     },
   ],
