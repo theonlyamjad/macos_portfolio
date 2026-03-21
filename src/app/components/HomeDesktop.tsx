@@ -31,8 +31,8 @@ const Home = () => {
                     <Image
                     src="/images/folder.png"
                     alt={project.name}
-                    width={50}
-                    height={50}
+                    width={75}
+                    height={75}
                     />
                     <p>{project.name}</p>
                 </li>

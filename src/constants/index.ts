@@ -79,8 +79,8 @@ const dockApps = [
 const blogPosts = [
   {
     id:1,
-    date: "Sep 2 , 2025",
-    title : "bla bla",
+    date: "",
+    title : "",
     image : "/images/" ,
     link : "",
   }
@@ -205,8 +205,8 @@ const WORK_LOCATION = {
       name: "MARcrute",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-5", 
+      windowPosition: "top-[5vh] right-[5vw]", 
       children: [
         {
           id: 1,
@@ -247,8 +247,8 @@ const WORK_LOCATION = {
       name: "Frovi",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      position: "top-10 left-40",
+      windowPosition: "top-[5vh] right-[15vw]",
       children: [
         {
           id: 1,
@@ -288,8 +288,8 @@ const WORK_LOCATION = {
       name: "Contact-App",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      position: "top-40 left-5", 
+      windowPosition: "top-[15vh] right-[5vw]",
       children: [
         {
           id: 1,
@@ -329,8 +329,8 @@ const WORK_LOCATION = {
       name: "PDA",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      position: "top-40 left-40", 
+      windowPosition: "top-[15vh] right-[15vw]",
       children: [
         {
           id: 1,
