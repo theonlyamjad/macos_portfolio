@@ -12,7 +12,6 @@ const Finder = () => {
     const { openWindow } = useWindowStore()
     const { activeLocation, setActiveLocation } = useLocationStore() as any
 
-    // Fallback to locations.work if activeLocation is null/undefined
     const currentLocation = activeLocation ?? locations.work
 
     const openItem = (item: any) => {
@@ -34,15 +33,18 @@ const Finder = () => {
                 <h3>{name}</h3>
                 <ul>
                     {items.map((item: any) => (
-                        <li key={item.id} onClick={() => setActiveLocation(item)}>
-                            <Image
-                                src={item.icon}
-                                alt={item.name}
-                                width={18}
-                                height={18}
-                                className={clsx(item.id === currentLocation?.id ? "active" : "not-active")}
-                            />
-                            <p className="text-sm font-medium truncate">{item.name}</p>
+                        <li 
+                            key={item.id} 
+                            onClick={() => setActiveLocation(item)} 
+                            className={clsx(item.id === currentLocation?.id ? "active" : "not-active")}
+                            >
+                                <Image
+                                    src={item.icon}
+                                    alt={item.name}
+                                    width={18}
+                                    height={18}
+                                />
+                                <p className="text-sm font-medium truncate">{item.name}</p>
                         </li>
                     ))}
                 </ul>
