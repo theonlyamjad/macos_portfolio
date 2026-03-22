@@ -36,7 +36,6 @@ const Dock = () => {
         const handleMouseMove = (e:MouseEvent) => {
             const {left} = dock.getBoundingClientRect();
             animateIcons(e.clientX - left);
-
         }
         const resetIcons = () => 
             icons.forEach((icon) => 
@@ -56,15 +55,15 @@ const Dock = () => {
         }
     },[]);
 
-    const toggleApp = (app:any) =>{
-        if(!app.canOpen) return;
-        const window = windows[app.id];
-        if(window.isOpen){
+    const toggleApp = (app: { id: string; canOpen: boolean }) => {
+        if (!app.canOpen) return;
+        const currentWin = windows[app.id];
+        if (!currentWin) return;
+        if (currentWin.isOpen) {
             closeWindow(app.id);
-        }else{
+        } else {
             openWindow(app.id);
         }
-        console.log(windows);
     }
 
     return (

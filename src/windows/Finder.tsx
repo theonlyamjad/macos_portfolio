@@ -16,13 +16,16 @@ const Finder = () => {
     const currentLocation = activeLocation ?? locations.work
 
     const openItem = (item: any) => {
-        if (item.fileType === 'pdf') return openWindow('resume')
-        if (item.kind === 'folder') return setActiveLocation(item)
-        if (['fig', 'url'].includes(item.fileType) && item.href)
-            return window.open(item.href, "_blank")
+    console.log('1. openItem fired:', item.name, item.fileType, item.kind)
+    
+    if (item.fileType === 'pdf') return openWindow('resume')
+    if (item.kind === 'folder') return setActiveLocation(item)
+    if (['fig', 'url'].includes(item.fileType) && item.href)
+        return window.open(item.href, "_blank")
 
-        openWindow(`${item.fileType}${item.kind}`, item)
-    }
+    console.log('2. calling openWindow with:', `${item.fileType}${item.kind}`, item)
+    openWindow(`${item.fileType}${item.kind}`, item)
+}
 
     const renderList = (name: any, items: any) => {
         if (!Array.isArray(items) || items.length === 0) return null
